@@ -1,0 +1,8 @@
+os.pullEvent = os.pullEventRaw
+me = shell.getRunningProgram()
+print("Enter Text")
+input = read()
+req = textutils.urlEncode(input)
+url = http.get("http://www.danielwilleke.com/MCWriteMain.php?msg="..req.."")
+sleep(3)
+shell.run(me)
