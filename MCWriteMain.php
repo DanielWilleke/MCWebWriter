@@ -8,10 +8,17 @@
 
 	</script>
 	<style type="text/css">
-
+		#iFrame1{
+		border: 2px solid;
+		height: 600px;
+		width: 900px;
+	}
 	</style>
 </head>
 <body>
+<div id="outerdiv">
+	<iframe id="iFrame1" scrolling="no" frameborder=0 src="MCWriteOutput.php#bottom"></iframe>
+</div>
 
 <?php
 if (isset($_GET['msg']))
