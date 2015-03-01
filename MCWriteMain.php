@@ -14,6 +14,15 @@
 <body>
 
 <?php
-
+if (isset($_GET['msg']))
+{
+	$file = 'MCWriteReceiver.txt';
+    $msg = $_GET['msg'];
+	
+	if (($fd = fopen($file, "a+")) !== false) { 
+		fwrite($fd, "\n" . $msg . "<br />");   
+		fclose($fd); 
+	}
+}
 ?>
 </body>
